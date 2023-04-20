@@ -15,7 +15,7 @@ export class IsNameUniqueConstraint implements ValidatorConstraintInterface {
   constructor(private userService: UserService) {}
 
   validate(userName: string, args: ValidationArguments) {
-    console.log(args);
+    console.info(args);
     return !!!this.userService.searchUserName(userName);
   }
 }

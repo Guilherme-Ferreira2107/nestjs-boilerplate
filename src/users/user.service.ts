@@ -13,8 +13,6 @@ export class UserService {
   }
 
   public searchUserName(name: string) {
-    this.users.find((user) => user.name == name);
-
-    return this.users;
+    return this.users.find((user) => user.name === name);
   }
 }
